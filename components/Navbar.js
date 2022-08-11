@@ -28,13 +28,13 @@ export default function Navbar(){
 
         if (currentTheme === 'dark') {
             return(
-                <li style={mounted && theme === 'dark' ? darkButtonStyles : lightButtonStyles} className="flex mx-5 px-2 py-2 rounded-lg cursor-pointer bg-orange-400 shadow-md shadow-orange-500/50" onClick={() => {setTheme('light')}}>
+                <li style={mounted && theme === 'dark' ? darkButtonStyles : lightButtonStyles} className="flex mx-5 px-2 py-2 rounded-lg cursor-pointer bg-orange-400 hover:bg-orange-500 shadow-md shadow-orange-500/50" onClick={() => {setTheme('light')}}>
                     <BiSun size={25} fill="white"/>
                 </li>
             )
         } else {
             return(
-                <li style={mounted && theme === 'dark' ? darkButtonStyles : lightButtonStyles} className="flex mx-5 px-2 py-2 rounded-lg cursor-pointer bg-orange-400  shadow-md shadow-orange-500/50" onClick={() => {setTheme('dark')}}>
+                <li style={mounted && theme === 'dark' ? darkButtonStyles : lightButtonStyles} className="flex mx-5 px-2 py-2 rounded-lg cursor-pointer bg-orange-400 hover:bg-orange-500  shadow-md shadow-orange-500/50" onClick={() => {setTheme('dark')}}>
                     <BiMoon size={25} fill="white"/>
                 </li>
             )
@@ -56,25 +56,25 @@ export default function Navbar(){
                 <div className="lg:flex py-5 px-5 lg:w-11/12 mx-auto justify-between">
                     <Link href='/'>
                         <div className="flex mx-auto lg:mx-0 cursor-pointer">
-                            <img src="./apsdc-logo.png" className="w-12 mr-5 my-0"/>
+                            <img src="./apsdc-logo.png" className="w-12 mr-5 my-0 rounded-lg"/>
                             <h1 className='text-2xl pt-3 font-semibold font-Finlandica text-gray-900 dark:text-gray-200'>Army Public School Delhi Cantt</h1>
                         </div>
                     </Link>
                     <div className="py-10 lg:py-0">
                         <ul className="lg:flex flex-wrap grid grid-cols-4 py-2">
                             <Link href="/">
-                            <li className="cursor-pointer flex lg:mx-5 mx-1 px-4 py-2 rounded-lg text-gray-200 bg-[#FF4949] shadow-md shadow-red-500/50">
+                            <li className="cursor-pointer flex lg:mx-5 mx-1 px-4 py-2 rounded-lg text-gray-200 bg-[#FF4949] shadow-md shadow-red-500/50 hover:bg-gradient-to-r from-pink-600 to-red-600">
                                 <HiOutlineHome size={25} className="lg:visible invisible"/>
                                 Home
                             </li>
                             </Link>
                             <Link href="/results">
-                            <li className="cursor-pointer flex lg:mx-5 mx-1 px-4 py-2 rounded-lg text-gray-200 bg-[#30AADD] shadow-md shadow-blue-500/50">
+                            <li className="cursor-pointer flex lg:mx-5 mx-1 px-4 py-2 rounded-lg text-gray-200 bg-[#30AADD] shadow-md shadow-blue-500/50 hover:bg-gradient-to-r from-teal-600 to-blue-400">
                                 <BiClipboard size={25} className="lg:visible invisible"/>Results
                             </li>
                             </Link>
                             <Link href="/stats">
-                            <li className="cursor-pointer flex lg:mx-5 mx-1 px-4 py-2 rounded-lg text-gray-200 bg-[#25e1a9] shadow-md shadow-teal-500/50">
+                            <li className="cursor-pointer flex lg:mx-5 mx-1 px-4 py-2 rounded-lg text-gray-200 bg-[#25e1a9] shadow-md shadow-teal-500/50 hover:bg-gradient-to-r from-blue-600 to-green-400">
                                 <BiStats size={25} className="lg:visible invisible"/>Stats
                             </li>
                             </Link>

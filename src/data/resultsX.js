@@ -1,4 +1,4 @@
-export default [
+const resultsX = [
     {
       "name": "Siddharth Sharma",
       "class": 10,
@@ -6,11 +6,7 @@ export default [
       "maths": 100,
       "hindi": 98,
       "science": 100,
-      "socialScience": 100,
-      "studentphoto": {
-        "url": "https://media.graphassets.com/Zlub2NLSPaTMNHETvZVD"
-      },
-      "detailedResult": "siddharth-sharma"
+      "socialScience": 100
     },
     {
       "name": "Ferb",
@@ -19,11 +15,7 @@ export default [
       "maths": 99,
       "hindi": 97,
       "science": 99,
-      "socialScience": 97,
-      "studentphoto": {
-        "url": "https://media.graphassets.com/tIXAMQPJR8uJY7TxkYZz"
-      },
-      "detailedResult": "ferb"
+      "socialScience": 97
     },
     {
       "name": "Hidetoshi Dekisugi",
@@ -32,10 +24,17 @@ export default [
       "maths": 99,
       "hindi": 95,
       "science": 98,
-      "socialScience": 98,
-      "studentphoto": {
-        "url": "https://media.graphassets.com/YDa26qIBQZGCq0jcwo4g"
-      },
-      "detailedResult": "hidetoshi-dekisugi"
+      "socialScience": 98
+    },
+    {
+      "name": "Ned Leeds",
+      "class": 10,
+      "english": 98,
+      "maths": 90,
+      "hindi": 65,
+      "science": 92,
+      "socialScience": 88
     }
   ]
+
+  export default resultsX;

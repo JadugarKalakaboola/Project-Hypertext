@@ -28,9 +28,9 @@ export default function Footer(){
             <div className="flex justify-around pt-5">
                 <div>
                     <p className="text-xl font-bold font-Finlandica">Contact us</p>
-                    <p className="flex py-1"><MdLocationPin /> Army Public School Sadar Bazar Road, Delhi Cantt, New Delhi - 110010</p>
-                    <p className="flex py-1"><BsFillTelephoneFill /> 011-25693777   ||  25692720</p>
-                    <p className="flex py-1"><GrMail/> apsdelhicantt@gmail.com</p>
+                    <p className="flex py-1"><MdLocationPin className="mt-1 mx-1"/> Army Public School Sadar Bazar Road, Delhi Cantt, New Delhi - 110010</p>
+                    <p className="flex py-1"><BsFillTelephoneFill className="mt-1 mx-1"/> 011-25693777   ||  25692720</p>
+                    <p className="flex py-1"><GrMail className="mt-1 mx-1"/> apsdelhicantt@gmail.com</p>
                 </div>
                 <div>
                     <p className="text-xl font-bold font-Finlandica">Reach us</p>

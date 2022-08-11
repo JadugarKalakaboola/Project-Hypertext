@@ -67,13 +67,13 @@ export default function Home() {
         </div>
           <div className="carousel-3 lg:mx-auto lg:w-9/12">
             <div className="lg:p-10 lg:text-center">
-              <p className="lg:text-6xl my-5 font-bold font-Finlandica flex justify-center"><AiTwotoneStar fill="orange"/>Our Shining Stars<AiTwotoneStar fill="orange"/></p>
+              <p className="lg:text-6xl text-4xl my-5 font-bold font-Finlandica flex justify-center"><AiTwotoneStar fill="orange"/>Our Shining Stars<AiTwotoneStar fill="orange"/></p>
               <p className="text-center font-bold text-3xl">Class XII</p>
               <div className="lg:grid-cols-3 lg:grid lg:gap-5 gap-2 mt-5">
                 <div className="my-5 lg:my-0 flex lg:block lg:min-w-4/12 lg:min-h-11/12 bg-purple-400 rounded-lg shadow-lg shadow-purple-600 py-10">
                   <img src="./aadi.jpeg" className="rounded-full h-32 w-32 mt-5 lg:mt-0 lg:h-48 lg:w-48 mx-auto "/>
                   <div>
-                  <div style={mounted && theme === 'light' ? lightButtonStyles : darkButtonStyles} className="font-semibold text-sm mt-10 py-2 lg:text-base flex flex-wrap lg:block bg-gray-200 w-8/12 mx-auto text-gray-900 rounded-lg">
+                  <div style={mounted && theme === 'light' ? lightButtonStyles : darkButtonStyles} className="font-semibold text-sm lg:mt-10 py-2 lg:text-base  lg:block bg-gray-200 w-11/12 px-10 mx-auto text-gray-900 rounded-lg">
                     <p className="text-sm lg:text-2xl text-bold font-semibold font-Finlandica text-gray-900">Aadi Jain</p>
                     <p>English - 99</p>
                     <p>Physics - 98</p>
@@ -87,7 +87,7 @@ export default function Home() {
                 <div className="my-5 lg:my-0 flex lg:block lg:min-w-4/12 lg:min-h-11/12 bg-red-400 rounded-lg shadow-lg shadow-red-600 py-10">
                   <img src="./users/user-boy.png" className="rounded-full h-32 w-32 mt-5 lg:mt-0 lg:h-48 lg:w-48 mx-auto "/>
                   <div>
-                  <div style={mounted && theme === 'light' ? lightButtonStyles : darkButtonStyles} className="font-semibold text-sm mt-10 py-2 lg:text-base flex flex-wrap lg:block bg-gray-200 w-8/12 mx-auto text-gray-900 rounded-lg">
+                  <div style={mounted && theme === 'light' ? lightButtonStyles : darkButtonStyles} className="font-semibold text-sm lg:mt-10 py-2 lg:text-base  lg:block bg-gray-200 w-11/12 px-10 mx-auto text-gray-900 rounded-lg">
                   <p className="text-sm lg:text-2xl text-bold font-semibold text-gray-900 font-Finlandica">Random Sharma</p>
                     <p>English - 99</p>
                     <p>Maths - 97</p>
@@ -101,7 +101,7 @@ export default function Home() {
                 <div className="my-5 lg:my-0 flex lg:block lg:min-w-4/12 lg:min-h-11/12 bg-green-400 rounded-lg shadow-lg shadow-green-600 py-10">
                   <img src="./phineas.png" className="rounded-full h-32 w-32 mt-5 lg:mt-0 lg:h-48 lg:w-48 mx-auto "/>
                   <div>
-                  <div style={mounted && theme === 'light' ? lightButtonStyles : darkButtonStyles} className="font-semibold text-sm mt-10 py-2 lg:text-base flex flex-wrap lg:block bg-gray-200 w-8/12 mx-auto text-gray-900 rounded-lg">
+                  <div style={mounted && theme === 'light' ? lightButtonStyles : darkButtonStyles} className="font-semibold text-sm lg:mt-10 py-2 lg:text-base  lg:block bg-gray-200 w-11/12 px-10 mx-auto text-gray-900 rounded-lg">
                     <p className="text-sm lg:text-2xl text-bold font-semibold text-gray-900 font-Finlandica">Phineas</p>
                     <p>English - 97</p>
                     <p>Maths - 95</p>
@@ -122,7 +122,7 @@ export default function Home() {
                 <div className="flex lg:block lg:min-w-4/12 bg-purple-400 rounded-lg shadow-lg shadow-purple-600 py-10">
                   <img src="./users/user-boy.png" className="rounded-full h-32 w-32 mt-5 lg:mt-0 lg:h-48 lg:w-48 mx-auto "/>
                   <div>
-                    <div style={mounted && theme === 'light' ? lightButtonStyles : darkButtonStyles} className="font-semibold text-sm mt-10 py-2 lg:text-base flex flex-wrap lg:block bg-gray-200 w-8/12 mx-auto text-gray-900 rounded-lg">
+                    <div style={mounted && theme === 'light' ? lightButtonStyles : darkButtonStyles} className="font-semibold text-sm lg:mt-10 py-2 lg:text-base  lg:block bg-gray-200 w-11/12 px-10 mx-auto text-gray-900 rounded-lg">
                       <p className="text-sm lg:text-2xl text-bold font-semibold text-gray-900 font-Finlandica">Siddharth Sharma</p>
                       <p>English - 99</p>
                       <p>Hindi - 98</p>
@@ -136,7 +136,7 @@ export default function Home() {
                 <div className="my-5 lg:my-0 flex lg:block lg:min-w-4/12 lg:min-h-11/12 bg-red-400 rounded-lg shadow-lg shadow-red-600 py-10">
                   <img src="./Ferb.png" className="rounded-full h-32 w-32 mt-5 lg:mt-0 lg:h-48 lg:w-48 mx-auto "/>
                   <div>
-                    <div style={mounted && theme === 'light' ? lightButtonStyles : darkButtonStyles} className="font-semibold text-sm mt-10 py-2 lg:text-base flex flex-wrap lg:block bg-gray-200 w-8/12 mx-auto text-gray-900 rounded-lg">
+                    <div style={mounted && theme === 'light' ? lightButtonStyles : darkButtonStyles} className="font-semibold text-sm lg:mt-10 py-2 lg:text-base  lg:block bg-gray-200 w-11/12 px-10 mx-auto text-gray-900 rounded-lg">
                       <p className="text-sm lg:text-2xl text-bold font-semibold text-gray-900 font-Finlandica">Ferb</p>
                       <p>English - 99</p>
                       <p>Hindi - 97</p>
@@ -150,7 +150,7 @@ export default function Home() {
                 <div className="my-5 lg:my-0 flex lg:block lg:min-w-4/12 lg:min-h-11/12 bg-green-400 rounded-lg shadow-lg shadow-green-600 py-10">
                   <img src="./dekisugi.png" className="rounded-full h-32 w-32 mt-5 lg:mt-0 lg:h-48 lg:w-48 mx-auto "/>
                   <div>
-                    <div style={mounted && theme === 'light' ? lightButtonStyles : darkButtonStyles} className="font-semibold text-sm mt-10 py-2 lg:text-base flex flex-wrap lg:block bg-gray-200 w-8/12 mx-auto text-gray-900 rounded-lg">
+                    <div style={mounted && theme === 'light' ? lightButtonStyles : darkButtonStyles} className="font-semibold text-sm lg:mt-10 py-2 lg:text-base  lg:block bg-gray-200 w-11/12 px-10 mx-auto text-gray-900 rounded-lg">
                       <p className="text-sm lg:text-2xl text-bold font-semibold text-gray-900 font-Finlandica">Hidetoshi Dekisugi</p>
                       <p>English - 97</p>
                       <p>Hindi - 95</p>
