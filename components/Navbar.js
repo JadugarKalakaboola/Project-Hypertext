@@ -46,11 +46,6 @@ export default function Navbar(){
         boxShadow: "5px 5px 5px -1px rgba(255, 255, 255, 0.05), -5px -5px 5px -1px rgba(0, 0, 0, 0.5)"
     }
 
-    const pressedButtonStyles = theme === 'light' ? {
-            boxShadow: "inset 10px 10px 10px -1px rgba(10, 99, 169, 0.16), inset -10px -10px 10px -1px rgba(255, 255, 255, 0.70)"
-    } : {
-            boxShadow: "inset 10px 10px 10px -1px rgba(255, 255, 255, 0.05), inset -10px -10px 5px -1px rgba(0, 0, 0, 0.5"
-        }
 
 
     return(

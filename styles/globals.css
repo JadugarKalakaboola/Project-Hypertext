@@ -5,6 +5,9 @@
 @tailwind utilities;
 
 
+html{
+    overflow-x: hidden;
+}
 .button{
     background-color: #ebeef1;
     box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.16),
