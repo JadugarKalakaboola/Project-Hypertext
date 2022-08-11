@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {BsFillTelephoneFill} from 'react-icons/bs'
 import {GrMail} from 'react-icons/gr'
 import { MdLocationPin } from 'react-icons/md'
@@ -7,6 +7,12 @@ import { useTheme } from "next-themes";
 export default function Footer(){
 
     const {systemTheme, theme, setTheme} = useTheme();
+
+    const [mounted, setMounted] = useState(false)
+
+    useEffect(() => {
+        setMounted(true);
+    }, [])
 
     const lightButtonStyles = {
         boxShadow: "10px 10px 10px -1px rgba(10, 99, 169, 0.16), -10px -10px 10px -1px rgba(255, 255, 255, 0.70)"
@@ -17,7 +23,7 @@ export default function Footer(){
     }
 
     return(
-        <div style={theme === 'dark' ? darkButtonStyles : lightButtonStyles} className="w-11/12 px-5 py-10 mx-auto rounded-lg">
+        <div style={mounted && theme === 'dark' ? darkButtonStyles : lightButtonStyles} className="w-11/12 px-5 py-10 mx-auto rounded-lg">
             <div className='bg-gray-700 h-0.5 w-full dark:bg-gray-300'></div>
             <div className="flex justify-around pt-5">
                 <div>

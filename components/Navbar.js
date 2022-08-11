@@ -28,13 +28,13 @@ export default function Navbar(){
 
         if (currentTheme === 'dark') {
             return(
-                <li style={theme === 'dark' ? darkButtonStyles : lightButtonStyles} className="flex mx-5 px-2 py-2 rounded-lg cursor-pointer bg-orange-400 shadow-md shadow-orange-500/50" onClick={() => {setTheme('light')}}>
+                <li style={mounted && theme === 'dark' ? darkButtonStyles : lightButtonStyles} className="flex mx-5 px-2 py-2 rounded-lg cursor-pointer bg-orange-400 shadow-md shadow-orange-500/50" onClick={() => {setTheme('light')}}>
                     <BiSun size={25} fill="white"/>
                 </li>
             )
         } else {
             return(
-                <li style={theme === 'dark' ? darkButtonStyles : lightButtonStyles} className="flex mx-5 px-2 py-2 rounded-lg cursor-pointer bg-orange-400  shadow-md shadow-orange-500/50" onClick={() => {setTheme('dark')}}>
+                <li style={mounted && theme === 'dark' ? darkButtonStyles : lightButtonStyles} className="flex mx-5 px-2 py-2 rounded-lg cursor-pointer bg-orange-400  shadow-md shadow-orange-500/50" onClick={() => {setTheme('dark')}}>
                     <BiMoon size={25} fill="white"/>
                 </li>
             )
@@ -52,7 +52,7 @@ export default function Navbar(){
 
     return(
         <div className="w-screen py-5">
-            <div className="w-11/12 mx-auto rounded-lg" style={theme === 'dark' ? darkButtonStyles : lightButtonStyles}>
+            <div className="w-11/12 mx-auto rounded-lg" style={mounted && theme === 'dark' ? darkButtonStyles : lightButtonStyles}>
                 <div className="lg:flex py-5 px-5 lg:w-11/12 mx-auto justify-between">
                     <Link href='/'>
                         <div className="flex mx-auto lg:mx-0 cursor-pointer">

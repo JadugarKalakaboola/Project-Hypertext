@@ -57,117 +57,113 @@ export default function Home() {
   return(
     <ContainerBlock>
       <div className="py-5">
-        <div style={theme === 'dark' ? darkButtonStyles : lightButtonStyles} className="carousels flex lg:w-8/12 w-11/12 mx-auto rounded-lg">
-          <div className="switch-left flex flex-col justify-center ml-3 cursor-pointer" onClick={prevSlide}><BsArrowLeftShort style={theme === 'dark' ? darkPressedButtonStyles : lightPressedButtonStyles} className="rounded-full" size={35}/></div>
-          {carouselIndex === 1 && <div className="carousel-1 mx-auto lg:w-9/12 lg:h-[80vh]">
-            <div className="p-10 text-center">
-              <p className="text-4xl font-bold font-Finlandica">Welcome to Army Public School, Delhi Cantt</p>
-              <img src="./apsdc-img.jpg" className="mx-auto pt-5 rounded-lg w-11/12 h-9/12"/>
+        <div style={mounted && theme === 'light' ? lightButtonStyles : darkButtonStyles} className="carousels flex lg:w-11/12 w-11/12 mx-auto rounded-lg">
+          {carouselIndex === 1 && <div className="carousel-1 mx-auto lg:h-[70vh]">
+            <div style={mounted && theme === 'light' ? lightButtonStyles : darkButtonStyles} className="">
+              <img src="./apsdc-img.jpg" className="w-screen h-[70vh] blur-md"/>
+              <p className="absolute text-gray-200 text-center top-[80%] text-2xl lg:top-[52%] lg:left-[22%] lg:text-5xl font-bold font-Finlandica">Welcome to Army Public School Delhi Cantt</p>
             </div>
           </div>}
-          
-          {carouselIndex === 2 && <div className="carousel-3 lg:mx-auto lg:w-9/12 lg:h-[80vh]">
+        </div>
+          <div className="carousel-3 lg:mx-auto lg:w-9/12">
             <div className="lg:p-10 lg:text-center">
-              <p className="lg:text-4xl font-bold font-Finlandica flex justify-center"><AiTwotoneStar fill="orange"/>Our Shining Stars<AiTwotoneStar fill="orange"/></p>
-              <p className="text-center font-bold">Class XII</p>
+              <p className="lg:text-6xl my-5 font-bold font-Finlandica flex justify-center"><AiTwotoneStar fill="orange"/>Our Shining Stars<AiTwotoneStar fill="orange"/></p>
+              <p className="text-center font-bold text-3xl">Class XII</p>
               <div className="lg:grid-cols-3 lg:grid lg:gap-5 gap-2 mt-5">
-                <div className="flex lg:block lg:min-w-4/12 lg:min-h-11/12 bg-purple-400 rounded-lg shadow-lg shadow-purple-600 py-10">
-                  <img src="./aadi.jpeg" className="rounded-full h-24 w-24 lg:h-auto lg:w-9/12 mx-auto "/>
+                <div className="my-5 lg:my-0 flex lg:block lg:min-w-4/12 lg:min-h-11/12 bg-purple-400 rounded-lg shadow-lg shadow-purple-600 py-10">
+                  <img src="./aadi.jpeg" className="rounded-full h-32 w-32 mt-5 lg:mt-0 lg:h-48 lg:w-48 mx-auto "/>
                   <div>
-                  <p className="text-sm lg:text-2xl text-bold font-semibold text-gray-200 font-Finlandica">Aadi Jain</p>
-                  <div className="font-semibold text-sm lg:text-base flex flex-wrap lg:block">
+                  <div style={mounted && theme === 'light' ? lightButtonStyles : darkButtonStyles} className="font-semibold text-sm mt-10 py-2 lg:text-base flex flex-wrap lg:block bg-gray-200 w-8/12 mx-auto text-gray-900 rounded-lg">
+                    <p className="text-sm lg:text-2xl text-bold font-semibold font-Finlandica text-gray-900">Aadi Jain</p>
                     <p>English - 99</p>
                     <p>Physics - 98</p>
                     <p>Chemistry - 100</p>
                     <p>Maths - 100</p>
                     <p>Computer Science - 100</p>
-                    <p className="font-bold border-2 border-purple-600 w-fit mx-auto px-1 py-0.5">TOTAL - 497/500</p>
+                    <p className="font-bold">TOTAL - 497/500</p>
                   </div>
                   </div>
                 </div>
-                <div className="flex lg:block lg:min-w-4/12 lg:min-h-11/12 bg-red-400 rounded-lg shadow-lg shadow-red-600 py-10">
-                  <img src="./users/user-boy.png" className="rounded-full h-24 w-24 lg:h-auto lg:w-9/12 mx-auto "/>
+                <div className="my-5 lg:my-0 flex lg:block lg:min-w-4/12 lg:min-h-11/12 bg-red-400 rounded-lg shadow-lg shadow-red-600 py-10">
+                  <img src="./users/user-boy.png" className="rounded-full h-32 w-32 mt-5 lg:mt-0 lg:h-48 lg:w-48 mx-auto "/>
                   <div>
-                  <p className="text-sm lg:text-2xl text-bold font-semibold text-gray-200 font-Finlandica">Random Sharma</p>
-                  <div className="font-semibold text-sm lg:text-base flex flex-wrap lg:block">
+                  <div style={mounted && theme === 'light' ? lightButtonStyles : darkButtonStyles} className="font-semibold text-sm mt-10 py-2 lg:text-base flex flex-wrap lg:block bg-gray-200 w-8/12 mx-auto text-gray-900 rounded-lg">
+                  <p className="text-sm lg:text-2xl text-bold font-semibold text-gray-900 font-Finlandica">Random Sharma</p>
                     <p>English - 99</p>
                     <p>Maths - 97</p>
                     <p>Economics - 99</p>
                     <p>Accountancy - 99</p>
                     <p>Business Studies - 99</p>
-                    <p className="font-bold border-2 border-red-600 w-fit mx-auto px-1 py-0.5">TOTAL - 493/500</p>
+                    <p className="font-bold">TOTAL - 493/500</p>
                   </div>
                   </div>
                 </div>
-                <div className="flex lg:block lg:min-w-4/12 lg:min-h-11/12 bg-green-400 rounded-lg shadow-lg shadow-green-600 py-10">
-                  <img src="./phineas.png" className="rounded-full h-24 w-24 lg:h-auto lg:w-9/12 mx-auto "/>
+                <div className="my-5 lg:my-0 flex lg:block lg:min-w-4/12 lg:min-h-11/12 bg-green-400 rounded-lg shadow-lg shadow-green-600 py-10">
+                  <img src="./phineas.png" className="rounded-full h-32 w-32 mt-5 lg:mt-0 lg:h-48 lg:w-48 mx-auto "/>
                   <div>
-                  <p className="text-sm lg:text-2xl text-bold font-semibold text-gray-200 font-Finlandica">Phineas</p>
-                  <div className="font-semibold text-sm lg:text-base flex flex-wrap lg:block">
+                  <div style={mounted && theme === 'light' ? lightButtonStyles : darkButtonStyles} className="font-semibold text-sm mt-10 py-2 lg:text-base flex flex-wrap lg:block bg-gray-200 w-8/12 mx-auto text-gray-900 rounded-lg">
+                    <p className="text-sm lg:text-2xl text-bold font-semibold text-gray-900 font-Finlandica">Phineas</p>
                     <p>English - 97</p>
                     <p>Maths - 95</p>
                     <p>Geography - 99</p>
                     <p>Political Science - 99</p>
                     <p>Economics - 99</p>
-                    <p className="font-bold border-2 border-green-600 w-fit mx-auto px-1 py-0.5">TOTAL - 489/500</p>
+                    <p className="font-bold">TOTAL - 489/500</p>
                   </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>}
-          {carouselIndex === 3 && <div className="carousel-3 lg:mx-auto lg:w-9/12 lg:h-[80vh]">
+          </div>
+          <div className="carousel-3 lg:mx-auto lg:w-9/12">
             <div className="lg:p-10 lg:text-center">
-              <p className="lg:text-4xl font-bold font-Finlandica flex justify-center"><AiTwotoneStar fill="orange"/>Our Shining Stars<AiTwotoneStar fill="orange"/></p>
-              <p className="text-center font-bold">Class X</p>
-              <div className="lg:grid-cols-3 lg:grid lg:gap-5 gap-2 mt-5">
-                <div className="flex lg:block lg:min-w-4/12 lg:min-h-11/12 bg-purple-400 rounded-lg shadow-lg shadow-purple-600 py-10">
-                  <img src="./users/user-boy.png" className="rounded-full h-24 w-24 lg:h-auto lg:w-9/12 mx-auto "/>
+              <p className="text-center font-bold text-3xl">Class X</p>
+              <div className="lg:grid-cols-3 lg:grid lg:gap-5 gap-2 mt-5 mb-32 ">
+                <div className="flex lg:block lg:min-w-4/12 bg-purple-400 rounded-lg shadow-lg shadow-purple-600 py-10">
+                  <img src="./users/user-boy.png" className="rounded-full h-32 w-32 mt-5 lg:mt-0 lg:h-48 lg:w-48 mx-auto "/>
                   <div>
-                  <p className="text-sm lg:text-2xl text-bold font-semibold text-gray-200 font-Finlandica">Siddharth Sharma</p>
-                  <div className="font-semibold text-sm lg:text-base flex flex-wrap lg:block">
-                    <p>English - 99</p>
-                    <p>Hindi - 98</p>
-                    <p>Maths - 100</p>
-                    <p>Science - 100</p>
-                    <p>Social Science - 100</p>
-                    <p className="font-bold border-2 border-purple-600 w-fit mx-auto px-1 py-0.5">TOTAL - 497/500</p>
-                  </div>
+                    <div style={mounted && theme === 'light' ? lightButtonStyles : darkButtonStyles} className="font-semibold text-sm mt-10 py-2 lg:text-base flex flex-wrap lg:block bg-gray-200 w-8/12 mx-auto text-gray-900 rounded-lg">
+                      <p className="text-sm lg:text-2xl text-bold font-semibold text-gray-900 font-Finlandica">Siddharth Sharma</p>
+                      <p>English - 99</p>
+                      <p>Hindi - 98</p>
+                      <p>Maths - 100</p>
+                      <p>Science - 100</p>
+                      <p>Social Science - 100</p>
+                      <p className="font-bold">TOTAL - 497/500</p>
+                    </div>
                   </div>
                 </div>
-                <div className="flex lg:block lg:min-w-4/12 lg:min-h-11/12 bg-red-400 rounded-lg shadow-lg shadow-red-600 py-10">
-                  <img src="./Ferb.png" className="rounded-full h-24 w-24 lg:h-auto lg:w-9/12 mx-auto "/>
+                <div className="my-5 lg:my-0 flex lg:block lg:min-w-4/12 lg:min-h-11/12 bg-red-400 rounded-lg shadow-lg shadow-red-600 py-10">
+                  <img src="./Ferb.png" className="rounded-full h-32 w-32 mt-5 lg:mt-0 lg:h-48 lg:w-48 mx-auto "/>
                   <div>
-                  <p className="text-sm lg:text-2xl text-bold font-semibold text-gray-200 font-Finlandica">Ferb</p>
-                  <div className="font-semibold text-sm lg:text-base flex flex-wrap lg:block">
-                    <p>English - 99</p>
-                    <p>Hindi - 97</p>
-                    <p>Maths - 99</p>
-                    <p>Science - 99</p>
-                    <p>Social Science - 99</p>
-                    <p className="font-bold border-2 border-red-600 w-fit mx-auto px-1 py-0.5">TOTAL - 493/500</p>
-                  </div>
+                    <div style={mounted && theme === 'light' ? lightButtonStyles : darkButtonStyles} className="font-semibold text-sm mt-10 py-2 lg:text-base flex flex-wrap lg:block bg-gray-200 w-8/12 mx-auto text-gray-900 rounded-lg">
+                      <p className="text-sm lg:text-2xl text-bold font-semibold text-gray-900 font-Finlandica">Ferb</p>
+                      <p>English - 99</p>
+                      <p>Hindi - 97</p>
+                      <p>Maths - 99</p>
+                      <p>Science - 99</p>
+                      <p>Social Science - 99</p>
+                      <p className="font-bold">TOTAL - 493/500</p>
+                    </div>
                   </div>
                 </div>
-                <div className="flex lg:block lg:min-w-4/12 lg:min-h-11/12 bg-green-400 rounded-lg shadow-lg shadow-green-600 py-10">
-                  <img src="./dekisugi.png" className="rounded-full h-24 w-24 lg:h-auto lg:w-9/12 mx-auto "/>
+                <div className="my-5 lg:my-0 flex lg:block lg:min-w-4/12 lg:min-h-11/12 bg-green-400 rounded-lg shadow-lg shadow-green-600 py-10">
+                  <img src="./dekisugi.png" className="rounded-full h-32 w-32 mt-5 lg:mt-0 lg:h-48 lg:w-48 mx-auto "/>
                   <div>
-                  <p className="text-sm lg:text-2xl text-bold font-semibold text-gray-200 font-Finlandica">Hidetoshi Dekisugi</p>
-                  <div className="font-semibold text-sm lg:text-base flex flex-wrap lg:block">
-                    <p>English - 97</p>
-                    <p>Hindi - 95</p>
-                    <p>Maths - 99</p>
-                    <p>Science - 99</p>
-                    <p>Social Science - 99</p>
-                    <p className="font-bold border-2 border-green-600 w-fit mx-auto px-1 py-0.5">TOTAL - 489/500</p>
-                  </div>
+                    <div style={mounted && theme === 'light' ? lightButtonStyles : darkButtonStyles} className="font-semibold text-sm mt-10 py-2 lg:text-base flex flex-wrap lg:block bg-gray-200 w-8/12 mx-auto text-gray-900 rounded-lg">
+                      <p className="text-sm lg:text-2xl text-bold font-semibold text-gray-900 font-Finlandica">Hidetoshi Dekisugi</p>
+                      <p>English - 97</p>
+                      <p>Hindi - 95</p>
+                      <p>Maths - 99</p>
+                      <p>Science - 99</p>
+                      <p>Social Science - 99</p>
+                      <p className="font-bold">TOTAL - 489/500</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>}
-          <div className="switch-right flex flex-col justify-center mr-3 cursor-pointer" onClick={nextSlide}><BsArrowRightShort style={theme === 'dark' ? darkPressedButtonStyles : lightPressedButtonStyles} className="rounded-full" size={35}/></div>
-        </div>
+          </div>        
       </div>
     </ContainerBlock>
   )
