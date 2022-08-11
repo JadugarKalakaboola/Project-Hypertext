@@ -17,7 +17,7 @@ export default function Footer(){
     return(
         <div style={buttonStyles} className="w-11/12 px-5 py-10 mx-auto rounded-lg">
             <div className='bg-gray-700 h-0.5 w-full dark:bg-gray-300'></div>
-            <div className="flex justify-around">
+            <div className="flex justify-around pt-5">
                 <div>
                     <p className="text-xl font-bold font-Finlandica">Contact us</p>
                     <p className="flex py-1"><MdLocationPin /> Army Public School Sadar Bazar Road, Delhi Cantt, New Delhi - 110010</p>

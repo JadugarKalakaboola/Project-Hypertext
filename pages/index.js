@@ -57,17 +57,17 @@ export default function Home() {
       <div className="py-5">
         <div style={pressedButtonStyles} className="carousels flex lg:w-8/12 w-11/12 mx-auto rounded-lg">
           <div className="switch-left flex flex-col justify-center ml-3 cursor-pointer" onClick={prevSlide}><BsArrowLeftShort style={pressedButtonStyles} className="rounded-full" size={35}/></div>
-          {carouselIndex === 1 && <div className="carousel-1 mx-auto lg:w-9/12 lg:h-[75vh]">
+          {carouselIndex === 1 && <div className="carousel-1 mx-auto lg:w-9/12 lg:h-[80vh]">
             <div className="p-10 text-center">
-              <p className="text-3xl font-bold font-Finlandica">Welcome to Army Public School, Delhi Cantt</p>
+              <p className="text-4xl font-bold font-Finlandica">Welcome to Army Public School, Delhi Cantt</p>
               <img src="./apsdc-img.jpg" className="mx-auto pt-5 rounded-lg w-11/12 h-9/12"/>
             </div>
           </div>}
           
-          {carouselIndex === 2 && <div className="carousel-3 lg:mx-auto lg:w-9/12 lg:h-[75vh]">
+          {carouselIndex === 2 && <div className="carousel-3 lg:mx-auto lg:w-9/12 lg:h-[80vh]">
             <div className="lg:p-10 lg:text-center">
               <p className="lg:text-4xl font-bold font-Finlandica flex justify-center"><AiTwotoneStar fill="orange"/>Our Shining Stars<AiTwotoneStar fill="orange"/></p>
-              <p className="text-center">Class XII</p>
+              <p className="text-center font-bold">Class XII</p>
               <div className="lg:grid-cols-3 lg:grid lg:gap-5 gap-2 mt-5">
                 <div className="flex lg:block lg:min-w-4/12 lg:min-h-11/12 bg-purple-400 rounded-lg shadow-lg shadow-purple-600 py-10">
                   <img src="./aadi.jpeg" className="rounded-full h-24 w-24 lg:h-auto lg:w-9/12 mx-auto "/>
@@ -79,7 +79,7 @@ export default function Home() {
                     <p>Chemistry - 100</p>
                     <p>Maths - 100</p>
                     <p>Computer Science - 100</p>
-                    <p className="font-bold">TOTAL - 497/500</p>
+                    <p className="font-bold border-2 border-purple-600 w-fit mx-auto px-1 py-0.5">TOTAL - 497/500</p>
                   </div>
                   </div>
                 </div>
@@ -93,7 +93,7 @@ export default function Home() {
                     <p>Economics - 99</p>
                     <p>Accountancy - 99</p>
                     <p>Business Studies - 99</p>
-                    <p className="font-bold">TOTAL - 493/500</p>
+                    <p className="font-bold border-2 border-red-600 w-fit mx-auto px-1 py-0.5">TOTAL - 493/500</p>
                   </div>
                   </div>
                 </div>
@@ -107,17 +107,17 @@ export default function Home() {
                     <p>Geography - 99</p>
                     <p>Political Science - 99</p>
                     <p>Economics - 99</p>
-                    <p className="font-bold">TOTAL - 489/500</p>
+                    <p className="font-bold border-2 border-green-600 w-fit mx-auto px-1 py-0.5">TOTAL - 489/500</p>
                   </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>}
-          {carouselIndex === 3 && <div className="carousel-3 lg:mx-auto lg:w-9/12 lg:h-[75vh]">
+          {carouselIndex === 3 && <div className="carousel-3 lg:mx-auto lg:w-9/12 lg:h-[80vh]">
             <div className="lg:p-10 lg:text-center">
               <p className="lg:text-4xl font-bold font-Finlandica flex justify-center"><AiTwotoneStar fill="orange"/>Our Shining Stars<AiTwotoneStar fill="orange"/></p>
-              <p className="text-center">Class X</p>
+              <p className="text-center font-bold">Class X</p>
               <div className="lg:grid-cols-3 lg:grid lg:gap-5 gap-2 mt-5">
                 <div className="flex lg:block lg:min-w-4/12 lg:min-h-11/12 bg-purple-400 rounded-lg shadow-lg shadow-purple-600 py-10">
                   <img src="./users/user-boy.png" className="rounded-full h-24 w-24 lg:h-auto lg:w-9/12 mx-auto "/>
@@ -129,7 +129,7 @@ export default function Home() {
                     <p>Maths - 100</p>
                     <p>Science - 100</p>
                     <p>Social Science - 100</p>
-                    <p className="font-bold">TOTAL - 497/500</p>
+                    <p className="font-bold border-2 border-purple-600 w-fit mx-auto px-1 py-0.5">TOTAL - 497/500</p>
                   </div>
                   </div>
                 </div>
@@ -143,7 +143,7 @@ export default function Home() {
                     <p>Maths - 99</p>
                     <p>Science - 99</p>
                     <p>Social Science - 99</p>
-                    <p className="font-bold">TOTAL - 493/500</p>
+                    <p className="font-bold border-2 border-red-600 w-fit mx-auto px-1 py-0.5">TOTAL - 493/500</p>
                   </div>
                   </div>
                 </div>
@@ -157,7 +157,7 @@ export default function Home() {
                     <p>Maths - 99</p>
                     <p>Science - 99</p>
                     <p>Social Science - 99</p>
-                    <p className="font-bold">TOTAL - 489/500</p>
+                    <p className="font-bold border-2 border-green-600 w-fit mx-auto px-1 py-0.5">TOTAL - 489/500</p>
                   </div>
                   </div>
                 </div>
@@ -166,25 +166,6 @@ export default function Home() {
           </div>}
           <div className="switch-right flex flex-col justify-center mr-3 cursor-pointer" onClick={nextSlide}><BsArrowRightShort style={pressedButtonStyles} className="rounded-full" size={35}/></div>
         </div>
-        <div className=" w-11/12 lg:w-9/12 mx-auto">
-            <div className="p-10 lg:text-center">
-              <p className="lg:text-5xl text-orange-500 font-bold font-Finlandica">Proud Moment</p>
-              <div className="lg:flex py-5 justify-between">
-                <div className="w-5/12">
-                  <p className="lg:text-xl font-bold font-Finlandica text-green-500">More than 30% students have scored more than 90% in Class XII</p>
-                  <div style={buttonStyles} className="lg:mx-auto p-5 flex justify-center rounded-3xl">
-                    <DoughnutChart/>
-                  </div>
-                </div>
-                <div className="w-5/12">
-                  <p className="lg:text-xl font-bold font-Finlandica text-green-500">More than 45% students have scored more than 90% in Class XII</p>
-                  <div style={buttonStyles} className="lg:mx-auto p-5 flex justify-center rounded-3xl">
-                    <DoughnutChart10 />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
       </div>
     </ContainerBlock>
   )
