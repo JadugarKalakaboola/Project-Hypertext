@@ -5,6 +5,7 @@ import {BsArrowLeftShort, BsArrowRightShort} from 'react-icons/bs'
 import DoughnutChart from "../components/DoughnutChart";
 import {AiTwotoneStar} from 'react-icons/ai'
 import DoughnutChart10 from "../components/DoughnutChart10";
+import {motion} from 'framer-motion'
 
 export default function Home() {
 
@@ -56,16 +57,16 @@ export default function Home() {
 
   return(
     <ContainerBlock>
-      <div className="py-5">
+      <motion.div className="py-5"  initial={{opacity: 0}} animate={{opacity: 1}} transition={{ duration: 0.5 }}>
         <div style={mounted && theme === 'light' ? lightButtonStyles : darkButtonStyles} className="carousels flex lg:w-11/12 w-11/12 mx-auto rounded-lg">
           {carouselIndex === 1 && <div className="carousel-1 mx-auto lg:h-[70vh]">
             <div style={mounted && theme === 'light' ? lightButtonStyles : darkButtonStyles} className="">
-              <img src="./apsdc-img.jpg" className="w-screen h-[70vh] blur-md"/>
+              <motion.img src="./apsdc-img.jpg" className="w-screen h-[70vh] blur-md"/>
               <p className="absolute text-gray-200 text-center top-[80%] text-2xl lg:top-[52%] lg:left-[22%] lg:text-5xl font-bold font-Finlandica">Welcome to Army Public School Delhi Cantt</p>
             </div>
           </div>}
         </div>
-          <div className="carousel-3 lg:mx-auto lg:w-9/12">
+          <motion.div className="carousel-3 lg:mx-auto lg:w-9/12"  initial={{opacity: 0}} whileInView={{opacity:1}} transition={{duration: 1}}>
             <div className="lg:p-10 lg:text-center">
               <p className="lg:text-6xl text-4xl my-5 font-bold font-Finlandica flex justify-center"><AiTwotoneStar fill="orange"/>Our Shining Stars<AiTwotoneStar fill="orange"/></p>
               <p className="text-center font-bold text-3xl">Class XII</p>
@@ -114,7 +115,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
           <div className="carousel-3 lg:mx-auto lg:w-9/12">
             <div className="lg:p-10 lg:text-center">
               <p className="text-center font-bold text-3xl">Class X</p>
@@ -164,7 +165,7 @@ export default function Home() {
               </div>
             </div>
           </div>        
-      </div>
+      </motion.div>
     </ContainerBlock>
   )
 }

@@ -6,6 +6,7 @@ import {BiMoon} from 'react-icons/bi'
 import {AiOutlineStar} from 'react-icons/ai'
 import { useTheme } from "next-themes";
 import Link from 'next/link'
+import {motion} from 'framer-motion'
 
 
 export default function Navbar(){
@@ -51,7 +52,7 @@ export default function Navbar(){
     }
 
     return(
-        <div className="w-screen py-5">
+        <motion.div className="w-screen py-5" initial={{opacity: 0}} animate={{opacity: 1}} transition={{ duration: 1 }}>
             <div className="w-11/12 mx-auto rounded-lg" style={mounted && theme === 'dark' ? darkButtonStyles : lightButtonStyles}>
                 <div className="lg:flex py-5 px-5 lg:w-11/12 mx-auto justify-between">
                     <Link href='/'>
@@ -83,6 +84,6 @@ export default function Navbar(){
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
