@@ -38,25 +38,27 @@ export default function Home() {
     }
   }
 
+  const lightButtonStyles = {
+    boxShadow: "inset 10px 10px 10px -1px rgba(10, 99, 169, 0.16),inset -10px -10px 10px -1px rgba(255, 255, 255, 0.70)"
+  }
 
-  const pressedButtonStyles = theme === 'light' ? {
-      boxShadow: "inset 10px 10px 10px -1px rgba(10, 99, 169, 0.16),inset -10px -10px 10px -1px rgba(255, 255, 255, 0.70)"
-  } : {
+  const darkButtonStyles = {
+    boxShadow: "inset 5px 5px 5px -1px rgba(255, 255, 255, 0.05), inset -5px -5px 5px -1px rgba(0, 0, 0, 0.5)"
+  }
+
+  const lightPressedButtonStyles = {
+    boxShadow: "inset 10px 10px 10px -1px rgba(10, 99, 169, 0.16),inset -10px -10px 10px -1px rgba(255, 255, 255, 0.70)"
+  }
+
+  const darkPressedButtonStyles = {
       boxShadow: "inset 5px 5px 5px -1px rgba(255, 255, 255, 0.05), inset -5px -5px 5px -1px rgba(0, 0, 0, 0.5)"
   }
-
-  const buttonStyles = theme === 'light' ? {
-      boxShadow: "10px 10px 10px -1px rgba(10, 99, 169, 0.16),-10px -10px 10px -1px rgba(255, 255, 255, 0.70)"
-  } : {
-      boxShadow: "5px 5px 5px -1px rgba(255, 255, 255, 0.05), -5px -5px 5px -1px rgba(0, 0, 0, 0.5)"
-  }
-  
 
   return(
     <ContainerBlock>
       <div className="py-5">
-        <div style={pressedButtonStyles} className="carousels flex lg:w-8/12 w-11/12 mx-auto rounded-lg">
-          <div className="switch-left flex flex-col justify-center ml-3 cursor-pointer" onClick={prevSlide}><BsArrowLeftShort style={pressedButtonStyles} className="rounded-full" size={35}/></div>
+        <div style={theme === 'dark' ? darkButtonStyles : lightButtonStyles} className="carousels flex lg:w-8/12 w-11/12 mx-auto rounded-lg">
+          <div className="switch-left flex flex-col justify-center ml-3 cursor-pointer" onClick={prevSlide}><BsArrowLeftShort style={theme === 'dark' ? darkPressedButtonStyles : lightPressedButtonStyles} className="rounded-full" size={35}/></div>
           {carouselIndex === 1 && <div className="carousel-1 mx-auto lg:w-9/12 lg:h-[80vh]">
             <div className="p-10 text-center">
               <p className="text-4xl font-bold font-Finlandica">Welcome to Army Public School, Delhi Cantt</p>
@@ -164,7 +166,7 @@ export default function Home() {
               </div>
             </div>
           </div>}
-          <div className="switch-right flex flex-col justify-center mr-3 cursor-pointer" onClick={nextSlide}><BsArrowRightShort style={pressedButtonStyles} className="rounded-full" size={35}/></div>
+          <div className="switch-right flex flex-col justify-center mr-3 cursor-pointer" onClick={nextSlide}><BsArrowRightShort style={theme === 'dark' ? darkPressedButtonStyles : lightPressedButtonStyles} className="rounded-full" size={35}/></div>
         </div>
       </div>
     </ContainerBlock>

@@ -24,7 +24,7 @@ export default function Stats(){
     } : {
         boxShadow: "inset 5px 5px 5px -1px rgba(255, 255, 255, 0.05), inset -5px -5px 5px -1px rgba(0, 0, 0, 0.5)"
     }
-  
+    
     const buttonStyles = theme === 'light' ? {
         boxShadow: "10px 10px 10px -1px rgba(10, 99, 169, 0.16),-10px -10px 10px -1px rgba(255, 255, 255, 0.70)"
     } : {

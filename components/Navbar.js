@@ -28,30 +28,31 @@ export default function Navbar(){
 
         if (currentTheme === 'dark') {
             return(
-                <li style={buttonStyles} className="flex mx-5 px-2 py-2 rounded-lg cursor-pointer bg-orange-400 shadow-md shadow-orange-500/50" onClick={() => {setTheme('light')}}>
+                <li style={theme === 'dark' ? darkButtonStyles : lightButtonStyles} className="flex mx-5 px-2 py-2 rounded-lg cursor-pointer bg-orange-400 shadow-md shadow-orange-500/50" onClick={() => {setTheme('light')}}>
                     <BiSun size={25} fill="white"/>
                 </li>
             )
         } else {
             return(
-                <li style={buttonStyles} className="flex mx-5 px-2 py-2 rounded-lg cursor-pointer bg-orange-400  shadow-md shadow-orange-500/50" onClick={() => {setTheme('dark')}}>
+                <li style={theme === 'dark' ? darkButtonStyles : lightButtonStyles} className="flex mx-5 px-2 py-2 rounded-lg cursor-pointer bg-orange-400  shadow-md shadow-orange-500/50" onClick={() => {setTheme('dark')}}>
                     <BiMoon size={25} fill="white"/>
                 </li>
             )
         }
     }
 
-    const buttonStyles = theme === 'light' ? {
+
+    const lightButtonStyles = {
         boxShadow: "10px 10px 10px -1px rgba(10, 99, 169, 0.16), -10px -10px 10px -1px rgba(255, 255, 255, 0.70)"
-    } : {
+    }
+
+    const darkButtonStyles = {
         boxShadow: "5px 5px 5px -1px rgba(255, 255, 255, 0.05), -5px -5px 5px -1px rgba(0, 0, 0, 0.5)"
     }
 
-
-
     return(
         <div className="w-screen py-5">
-            <div className="w-11/12 mx-auto rounded-lg" style={buttonStyles}>
+            <div className="w-11/12 mx-auto rounded-lg" style={theme === 'dark' ? darkButtonStyles : lightButtonStyles}>
                 <div className="lg:flex py-5 px-5 lg:w-11/12 mx-auto justify-between">
                     <Link href='/'>
                         <div className="flex mx-auto lg:mx-0 cursor-pointer">

@@ -8,14 +8,16 @@ export default function Footer(){
 
     const {systemTheme, theme, setTheme} = useTheme();
 
-    const buttonStyles = theme === 'light' ? {
-        boxShadow: "10px 10px 10px -1px rgba(10, 99, 169, 0.16),-10px -10px 10px -1px rgba(255, 255, 255, 0.70)"
-    } : {
+    const lightButtonStyles = {
+        boxShadow: "10px 10px 10px -1px rgba(10, 99, 169, 0.16), -10px -10px 10px -1px rgba(255, 255, 255, 0.70)"
+    }
+
+    const darkButtonStyles = {
         boxShadow: "5px 5px 5px -1px rgba(255, 255, 255, 0.05), -5px -5px 5px -1px rgba(0, 0, 0, 0.5)"
     }
 
     return(
-        <div style={buttonStyles} className="w-11/12 px-5 py-10 mx-auto rounded-lg">
+        <div style={theme === 'dark' ? darkButtonStyles : lightButtonStyles} className="w-11/12 px-5 py-10 mx-auto rounded-lg">
             <div className='bg-gray-700 h-0.5 w-full dark:bg-gray-300'></div>
             <div className="flex justify-around pt-5">
                 <div>
