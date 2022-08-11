@@ -32,7 +32,7 @@ export default function Home() {
     if (carouselIndex === 3){
       setCarouselIndex(2)
     }else if (carouselIndex === 2){
-      setCarouselIndex(2)
+      setCarouselIndex(1)
     } else if (carouselIndex === 1){
       setCarouselIndex(3)
     }
