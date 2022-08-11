@@ -5,6 +5,7 @@ import resultsX from "../src/data/resultsX";
 import resultsXIISc from "../src/data/resultsXIISc";
 import resultsXIICom from "../src/data/resultsXIICom";
 import resultsXIIHu from "../src/data/resultsXIIHu";
+import { nanoid } from "nanoid";
 
 export default function Results(){
 
@@ -34,7 +35,7 @@ export default function Results(){
 
     return(
         <ContainerBlock>
-            <div className="w-11/12 my-10 mx-auto">
+            <div className="w-11/12 my-10 mx-auto overflow-scroll lg:overflow-hidden">
                 <div style={mounted && theme==='light' ? lightButtonStyles : darkButtonStyles} className="text-center lg:text-4xl lg:font-bold font-semibold w-fit py-3 rounded-lg mx-auto my-5 px-12 font-Finlandica bg-gradient-to-r from-pink-600 to-purple-600 text-gray-200">CLASS X</div>
                 <table style={mounted && theme==='light' ? lightPressedButtonStyles : darkPressedButtonStyles} className=" mx-auto w-11/12 rounded-lg ">
                     <tr>
@@ -47,7 +48,7 @@ export default function Results(){
                     </tr>
                     {resultsX.map((result) => {
                     return (
-                        <tr className="p-10">
+                        <tr className="p-10" key={nanoid()}>
                         <td className="p-5 rounded-lg">{result.name}</td>
                         <td>{result.english}</td>
                         <td>{result.hindi}</td>
@@ -59,7 +60,7 @@ export default function Results(){
                     })}
                 </table>
             </div>
-            <div className="w-11/12 my-10 mx-auto">
+            <div className="w-11/12 my-10 mx-auto overflow-scroll lg:overflow-hidden">
                 <div style={mounted && theme==='light' ? lightButtonStyles : darkButtonStyles} className="text-center lg:text-4xl lg:font-bold font-semibold w-fit py-3 rounded-lg mx-auto my-5 px-12 font-Finlandica bg-gradient-to-r from-pink-600 to-purple-600 text-gray-200">CLASS XII<br /> <span className="text-l">Science</span></div>
                 <table style={mounted && theme==='light' ? lightPressedButtonStyles : darkPressedButtonStyles} className=" mx-auto w-11/12 rounded-lg ">
                     <tr>
@@ -72,7 +73,7 @@ export default function Results(){
                     </tr>
                     {resultsXIISc.map((result) => {
                     return (
-                        <tr className="p-10">
+                        <tr className="p-10" key={nanoid()}>
                         <td className="p-5 rounded-lg">{result.name}</td>
                         <td>{result.english}</td>
                         <td>{result.maths}</td>
@@ -84,7 +85,7 @@ export default function Results(){
                     })}
                 </table>
             </div>
-            <div className="w-11/12 my-10 mx-auto">
+            <div className="w-11/12 my-10 mx-auto overflow-scroll lg:overflow-hidden">
                 <div style={mounted && theme==='light' ? lightButtonStyles : darkButtonStyles} className="text-center lg:text-4xl lg:font-bold font-semibold w-fit py-3 rounded-lg mx-auto my-5 px-12 font-Finlandica bg-gradient-to-r from-pink-600 to-purple-600 text-gray-200">CLASS XII <br/><span className="text-l">Commerce</span></div>
                 <table style={mounted && theme==='light' ? lightPressedButtonStyles : darkPressedButtonStyles} className=" mx-auto w-11/12 rounded-lg ">
                     <tr>
@@ -97,7 +98,7 @@ export default function Results(){
                     </tr>
                     {resultsXIICom.map((result) => {
                     return (
-                        <tr className="p-10">
+                        <tr className="p-10" key={nanoid()}>
                         <td className="p-5 rounded-lg">{result.name}</td>
                         <td>{result.english}</td>
                         <td>{result.maths}</td>
@@ -109,7 +110,7 @@ export default function Results(){
                     })}
                 </table>
             </div>
-            <div className="w-11/12 my-10 mx-auto">
+            <div className="w-11/12 my-10 mx-auto overflow-scroll lg:overflow-hidden">
                 <div style={mounted && theme==='light' ? lightButtonStyles : darkButtonStyles} className="text-center lg:text-4xl lg:font-bold font-semibold w-fit py-3 rounded-lg mx-auto my-5 px-12 font-Finlandica bg-gradient-to-r from-pink-600 to-purple-600 text-gray-200">CLASS XII <br/><span className="text-l">Humanities</span></div>
                 <table style={mounted && theme==='light' ? lightPressedButtonStyles : darkPressedButtonStyles} className=" mx-auto w-11/12 rounded-lg ">
                     <tr>
@@ -122,7 +123,7 @@ export default function Results(){
                     </tr>
                     {resultsXIIHu.map((result) => {
                     return (
-                        <tr className="p-10">
+                        <tr className="p-10"  key={nanoid()}>
                         <td className="p-5 rounded-lg">{result.name}</td>
                         <td>{result.english}</td>
                         <td>{result.maths}</td>

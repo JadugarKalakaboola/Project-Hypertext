@@ -6,7 +6,7 @@ const resultsXIICom = [
       "maths": 97,
       "accountancy": 99,
       "businessStudies": 99,
-      "economics": 99
+      "economics": 99,
     },
     {
       "name": "Budhdev",
